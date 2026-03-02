@@ -4,17 +4,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>26-spring-PHAM-P Demo</title>
+	<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+	
 	<header>
 		<h1>Ctrl+C-Ya</h1>
 	</header>
 
 	<main>
-		<form method="GET" action="/result">
-			<input type="text" name="whatUserTyped">
-			<input type="submit" value="Submit">
+		<form method="post" action="result.html">
+
+
+			<label for="fname">Name</label><br>
+			<input type="text" placeholder="Enter your name" id="fname" name="fname" required><br><br>
+
+			<label for="email">Email</label><br>
+			<input type="email" placeholder="Enter your email" id="email" name="email" required><br><br>
+
+			<label for="text">Location</label><br>
+			<input type="location" placeholder="(optional)" id="location" name="location"><br><br>
+
+			<label for="description">Bio Descriptions</label><br>
+			<textarea name="description" placeholder="(optional)" id="description"></textarea><br><br><br>
+
+			<button type="submit">Submit</button>
+			
+
+
 		</form>
 	</main>
  
