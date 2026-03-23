@@ -3,43 +3,45 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>26-spring-PHAM-P Demo</title>
-	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ctrl+C-Ya | Imposter Scanner</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-	
-	<header>
-		<h1>Ctrl+C-Ya</h1>
-	</header>
+<body>	
 
-	<main>
-		<form method="post" action="result.html">
+	<main class="background-wrapper">
+		<div class="glass-card">
+			<header>
+				<h1 class="form-title">Ctrl+C-Ya</h1>
+			</header>
+
+			<form method="post" action="/result.html">
+				<div class="input-group">
+					<label for="fname">Name:</label><br>
+					<input type="text" placeholder="Enter your full name" id="fname" name="fname" required><br>
+				</div>
+
+				<div class="input-group">
+					<label for="username">Username:</label><br>
+					<input type="text" placeholder="Enter your username" id="username" name="username" required><br>
+				</div>
+
+				<div class="input-group textarea-group">
+					<label for="description">Bio Descriptions:</label><br>
+					<textarea name="description" placeholder="(Optional)" id="description"></textarea><br><br>
+				</div>
+
+				<button type="submit" class="submit-btn">Submit</button>
+				
 
 
-			<label for="fname">Name</label><br>
-			<input type="text" placeholder="Enter your name" id="fname" name="fname" required><br><br>
-
-			<label for="email">Email</label><br>
-			<input type="email" placeholder="Enter your email" id="email" name="email" required><br><br>
-
-			<label for="text">Location</label><br>
-			<input type="location" placeholder="(optional)" id="location" name="location"><br><br>
-
-			<label for="description">Bio Descriptions</label><br>
-			<textarea name="description" placeholder="(optional)" id="description"></textarea><br><br><br>
-
-			<button type="submit">Submit</button>
-			
-
-
-		</form>
+			</form>
+		</div>
 	</main>
  
 	<footer>
-		<hr>
-		<small>
-			&copy; Phuong-Anh Pham, 2026
-		</small>
+		<small>&copy; Phuong-Anh Pham, 2026</small>
 	</footer>
 </body>
 </html>
