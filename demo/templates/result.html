@@ -3,11 +3,17 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>DATS 4001 Demo</title>
+	<title>Ctrl+C-Ya | Imposter Scanner</title>
 </head>
 
 <body>
-	Result, {{ placeholder }}!
+	<h2>Search Complete!! Match Account(s) Detected</h2>
+	<p>Username Similarity: {{u_sim}}%</p>
+	<p>Name Samilarity: {{b_sim}}%</p>
+	<p>Bio Similarity: {{b_sim}}%</p>
+	<p>Follower Ratio: {{ratio_text}}</p>
+	<h3> Result: {{status}} ({{ overall }}%)</h3>
+	<a href="/"><button>Back</button></a>
 </body>
 
 </html>
