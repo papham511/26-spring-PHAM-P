@@ -3,17 +3,48 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Ctrl+C-Ya | Imposter Scanner</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ctrl+C-Ya | Results</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='rstyle.css') }}">
+	
 </head>
 
 <body>
-	<h2>Search Complete!! Match Account(s) Detected</h2>
-	<p>Username Similarity: {{u_sim}}%</p>
-	<p>Name Samilarity: {{b_sim}}%</p>
-	<p>Bio Similarity: {{b_sim}}%</p>
-	<p>Follower Ratio: {{ratio_text}}</p>
-	<h3> Result: {{status}} ({{ overall }}%)</h3>
-	<a href="/"><button>Back</button></a>
-</body>
+	<main class="background-wrapper">
+		<div class="main-card">
+			<div class="card-header">
+				Search Complete!! Match Account(s) Detected
+			</div>
 
+	
+			{% for account in matches %}
+			<div class="account-card">
+				<h3>{{ account.name }} (@{{ account.username }})</h3>
+		
+				<div class="similarity">
+					Username Similarity: <strong>{{ account.u_sim }}%</strong><br>
+					Name Similarity: <strong>{{ account.n_sim }}%</strong><br>
+					Followers & Following Ratio: <strong>{{ account.ratio_text }}</strong><br>
+					{% if account.b_sim is not none %}
+						Bio Similarity: <strong>{{ account.b_sim }}%</strong>
+					{% endif %}
+				</div>
+
+				<div class="overall-score">
+					<br><h3>Overall Score:
+					<span class="{{ 'status-fake' if 'Fake' in account.status else 'status-real' }}">{{ account.status }} ({{ account.overall }}%)
+					</span></h3>
+				</div>
+			</div>
+			{% endfor %}
+
+			<a href="/form" style="text-decoration: none;">
+				<button class="btn-back">Back</button>
+			</a>
+		</div>
+	</main>
+	<footer style="text-align: centerl padding: 10px; color: white; position: relative; margin-top: -40px;">
+		<small>&copy; Phuong-Anh Pham, 2026</small>
+	</footer>
+</body>
 </html>
