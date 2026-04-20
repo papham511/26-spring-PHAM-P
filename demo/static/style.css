@@ -1,0 +1,132 @@
+/*Reset all default browser styles for consistency*/
+* {
+	/* remove default margin & padding*/ 
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;												/*makes width/height easier to control*/
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* style whole web background (full screen center layout) */
+body {
+	/* dark overlay & background */
+	background: url('insta-background.jpg');
+	background-size: cover;				/* make image cover entire screen */
+	background-position: center;
+	background-attachment: fixed;		/* keeps background fixed when scorlling */
+	height: 100vh;			/* full screen height */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;   /* vertical center */
+	align-items: center;		/* horisontal center */
+	color: white; /* text color */
+}
+
+/* frosted glass effect for the forms (user input) */
+.glass-card {
+	background: rgba(255, 255, 255, 0.1);   /*transparent white */
+	backdrop-filter: blur(15px);  /* blur background behind */
+	-webkit-backdrop-filter: blur(15px);
+	border: 1px solid rgba(255, 255, 255, 0.2);   /*soft border */
+	border-radius: 30px;   /* round corner */
+	padding: 3rem;
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	text-align: center;
+	width: 600px;
+	max-width: 90%; /* Ensure it doesn't break on small screens*/
+	margin: 0 auto; /* Ensure no weird margin pushing it to the side not align center*/
+}
+
+/* Title Styling */
+.form-title {
+	margin-bottom: 1rem;
+	font-weight: 600;
+	font-size: 5rem;
+	letter-spacing: 3px;
+}
+
+
+/* Input container (for icon + input field) */
+.input-group {
+	position: relative;  /* needed for positioning icon */
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+/* icon inside input field */
+.input-group i {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translate(-50%);			/* adjust posiiton */
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 0.9rem;
+}
+
+
+/* Input textarea fields */
+.input-group input,
+.input-group textarea {
+	width: 100%;
+	padding:12px 15px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	background: transparent;					/* see through background */
+	border-radius: 8px;
+	color: white;
+	outline: none;
+	transition: 0.3s;
+	text-align: left;
+}
+
+/* Textarea specific styles */
+.input-group textarea {
+	height: 80px;
+	resize: none;		/* disable resizing */
+	padding-top: 15px;
+}
+
+/* placeholder text (light color) */
+.input-group input::placeholder, 
+.input-group textarea::placeholder { 
+	color: rgba(255, 255, 255, 0.6); 
+} 
+
+/* when user clicks (focuses) input */
+.input-group input:focus, 
+.input-group textarea:focus { 
+	background: rgba(255, 255, 255, 0.2); 		/* slightly brighter */
+	border-color: white; 		/* highlight border */
+} 		
+
+/* submit button style */
+.submit-btn { 
+	width: 100%; 
+	padding: 12px; 
+	margin-top: 10px; 
+	background: white; 
+	color: #333; 
+	border: none; 
+	border-radius: 8px; 
+	font-size: 1rem; 
+	font-weight: bold; 
+	cursor: pointer; 								/* prointer cursor on hover */
+	transition: background 0.3s, transform 0.2s; 	/* smooth animation */
+} 
+
+/*button hover effect */
+.submit-btn:hover { 
+	background: #f0f0f0; 
+	transform: translateY(-2px); /* slight lift */
+} 
+
+.submit-btn:active { 
+	transform: translateY(0); 
+}
+
+footer { 
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	opacity: 0.8;
+	color: white;
+}
