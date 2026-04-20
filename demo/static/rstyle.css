@@ -1,0 +1,81 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* background */
+.background-wrapper {
+	background: url('/static/insta-background.jpg') no-repeat center center fixed;
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+/* The Glassmorphism Card */
+.main-card {
+	background: rgba(255, 255, 255, 0.1); /* Translucent white */
+	backdrop-filter: blur(15px); /*Frosty blur effect */
+	-webkit-backdrop-filter: blur(15px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	padding: 40px;
+	width: 100%;
+	max-width: 650px;
+	color: white;
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.card-header {
+	font-size: 1.8rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 30px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	padding-bottom: 10px;
+}
+
+.account-card {
+	background: rgba(255, 255, 255, 0.05);
+	margin-bottom: 25px;
+	padding: 20px;
+	border-radius: 15px;
+}
+
+.account-card h3 {
+	margin-top: 0;
+	color: #fff;
+}
+
+.similarity strong {
+	color: #00d4ff;
+}
+
+.status-fake {
+	color: #ff4d4d;
+	font-weight: bold;
+}
+
+.btn-back {
+	display: block;
+	width: 100%;
+	background: white;
+	color: #333;
+	border: none;
+	padding: 12px;
+	border-radius: 10px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 20px;
+}
+
+.btn-back:hover {
+	background: #e0e0e0;
+	transform: translateY(-2px);
+}
