@@ -5,11 +5,8 @@ import calc # Imports calculation from calc.py
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-	return render_template("form.html")
-
 @app.route("/form")
-def form():
+def index():
 	return render_template("form.html")
 
 @app.route("/result")

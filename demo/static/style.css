@@ -10,7 +10,7 @@
 /* style whole web background (full screen center layout) */
 body {
 	/* dark overlay & background */
-	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/static/insta-background.jpg');
+	background: url('insta-background.jpg');
 	background-size: cover;				/* make image cover entire screen */
 	background-position: center;
 	background-attachment: fixed;		/* keeps background fixed when scorlling */
@@ -124,7 +124,9 @@ body {
 }
 
 footer { 
-	margin-top: 20px; 
-	opacity: 0.8; 
-	text-align:left;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	opacity: 0.8;
+	color: white;
 }
