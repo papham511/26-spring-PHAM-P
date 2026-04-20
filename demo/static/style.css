@@ -1,29 +1,34 @@
+/*Reset all default browser styles for consistency*/
 * {
+	/* remove default margin & padding*/ 
 	margin: 0;
 	padding: 0;
-	box-sizing:border-box;
+	box-sizing:border-box;												/*makes width/height easier to control*/
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* style whole web background (full screen center layout) */
 body {
+	/* dark overlay & background */
 	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/static/insta-background.jpg');
-	background-size: cover;
+	background-size: cover;				/* make image cover entire screen */
 	background-position: center;
-	background-attachment: fixed;
-	height: 100vh;
+	background-attachment: fixed;		/* keeps background fixed when scorlling */
+	height: 100vh;			/* full screen height */
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	color: white;
+	justify-content: center;   /* vertical center */
+	align-items: center;		/* horisontal center */
+	color: white; /* text color */
 }
 
+/* frosted glass effect for the forms (user input) */
 .glass-card {
-	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(15px);
+	background: rgba(255, 255, 255, 0.1);   /*transparent white */
+	backdrop-filter: blur(15px);  /* blur background behind */
 	-webkit-backdrop-filter: blur(15px);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 30px;
+	border: 1px solid rgba(255, 255, 255, 0.2);   /*soft border */
+	border-radius: 30px;   /* round corner */
 	padding: 3rem;
 	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 	text-align: center;
@@ -32,6 +37,7 @@ body {
 	margin: 0 auto; /* Ensure no weird margin pushing it to the side not align center*/
 }
 
+/* Title Styling */
 .form-title {
 	margin-bottom: 1rem;
 	font-weight: 600;
@@ -39,39 +45,32 @@ body {
 	letter-spacing: 3px;
 }
 
-.submit-btn {
-	background-color: white;
-	color:#333;
-	font-weight: bold;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	transition: 0.3s;
-}
 
-
+/* Input container (for icon + input field) */
 .input-group {
-	position: relative;
+	position: relative;  /* needed for positioning icon */
 	margin-bottom: 20px;
 	text-align: left;
 }
 
+/* icon inside input field */
 .input-group i {
 	position: absolute;
 	left: 15px;
 	top: 50%;
-	transform: translate(-50%);
+	transform: translate(-50%);			/* adjust posiiton */
 	color: rgba(255, 255, 255, 0.8);
 	font-size: 0.9rem;
 }
 
 
+/* Input textarea fields */
 .input-group input,
 .input-group textarea {
 	width: 100%;
 	padding:12px 15px;
 	border: 1px solid rgba(255, 255, 255, 0.4);
-	background: transparent;
+	background: transparent;					/* see through background */
 	border-radius: 8px;
 	color: white;
 	outline: none;
@@ -79,24 +78,27 @@ body {
 	text-align: left;
 }
 
+/* Textarea specific styles */
 .input-group textarea {
 	height: 80px;
-	resize: none;
+	resize: none;		/* disable resizing */
 	padding-top: 15px;
 }
 
-
+/* placeholder text (light color) */
 .input-group input::placeholder, 
 .input-group textarea::placeholder { 
 	color: rgba(255, 255, 255, 0.6); 
 } 
 
+/* when user clicks (focuses) input */
 .input-group input:focus, 
 .input-group textarea:focus { 
-	background: rgba(255, 255, 255, 0.2); 
-	border-color: white; 
-} 
+	background: rgba(255, 255, 255, 0.2); 		/* slightly brighter */
+	border-color: white; 		/* highlight border */
+} 		
 
+/* submit button style */
 .submit-btn { 
 	width: 100%; 
 	padding: 12px; 
@@ -107,13 +109,14 @@ body {
 	border-radius: 8px; 
 	font-size: 1rem; 
 	font-weight: bold; 
-	cursor: pointer; 
-	transition: background 0.3s, transform 0.2s; 
+	cursor: pointer; 								/* prointer cursor on hover */
+	transition: background 0.3s, transform 0.2s; 	/* smooth animation */
 } 
 
+/*button hover effect */
 .submit-btn:hover { 
 	background: #f0f0f0; 
-	transform: translateY(-2px); 
+	transform: translateY(-2px); /* slight lift */
 } 
 
 .submit-btn:active { 
@@ -123,4 +126,5 @@ body {
 footer { 
 	margin-top: 20px; 
 	opacity: 0.8; 
+	text-align:left;
 }
